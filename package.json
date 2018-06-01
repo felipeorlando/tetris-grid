@@ -2,15 +2,23 @@
   "name": "tetris-grid",
   "version": "1.0.0",
   "description": "Just another grid framework, seriously!",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/felipeorlando"
-  },
   "keywords": [
     "tetris",
     "tetris-grid",
     "grid"
   ],
   "author": "Felipe Orlando <fobsouza@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack --watch --mode development",
+    "build": "./node_modules/.bin/webpack --mode production"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.2",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "postcss-loader": "^2.1.5",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
+  }
 }
