@@ -35,6 +35,21 @@ $containers: (
 }
 
 // Default columns
+.col,
+.col-xs,
+.col-sm,
+.col-md,
+.col-lg,
+.col-xl {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-left: 15px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
 [class*='col-'] {
   @include grid-column(12);
 }
@@ -62,7 +77,10 @@ $containers: (
 
 // Row
 .row {
+  box-sizing: border-box;
   display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
