@@ -1,0 +1,72 @@
+@import 'neat';
+
+$neat-grid: (
+  columns: 12,
+  gutter: 15px,
+);
+
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+);
+
+$containers: (
+	xs: none,
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+);
+
+// Containers
+.container {
+  @include grid-container;
+  margin: 0 auto;
+  width: 100%;
+
+  @each $breakpoint, $value in $breakpoints {
+    @media screen and (min-width: $value) {
+      max-width: map-get($containers, $breakpoint);
+    }
+  }
+}
+
+// Default columns
+[class*='col-'] {
+  @include grid-column(12);
+}
+
+// Medias Columns
+@each $breakpoint, $value in $breakpoints {
+  @media screen and (min-width: $value) {
+    @for $i from 1 through 12 {
+      .col-#{$breakpoint}-#{$i} {
+        @include grid-column($i);
+      }
+    }
+  }
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @media screen and (min-width: $value) {
+    @for $i from 1 through 12 {
+      .col-#{$breakpoint}-offset-#{$i} {
+        @include grid-push($i);
+      }
+    }
+  }
+}
+
+// Row
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Collapse
+.collapse {
+  @include grid-collapse;
+}
