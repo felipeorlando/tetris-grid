@@ -10,5 +10,11 @@
   "author": "Felipe Orlando <fobsouza@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "run-sequence": "^2.2.1"
   }
 }
