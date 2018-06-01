@@ -1,0 +1,16 @@
+{
+  "name": "tetris-grid",
+  "version": "1.0.0",
+  "description": "Just another grid framework, seriously!",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felipeorlando"
+  },
+  "keywords": [
+    "tetris",
+    "tetris-grid",
+    "grid"
+  ],
+  "author": "Felipe Orlando <fobsouza@gmail.com>",
+  "license": "MIT"
+}
