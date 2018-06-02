@@ -54,9 +54,9 @@ $containers: (
   @include grid-column(12);
 }
 
-// Medias Columns
+// Media Columns
 @each $breakpoint, $value in $breakpoints {
-  @media screen and (min-width: $value) {
+  @if $value == 0 {
     .column-#{$breakpoint} {
       float: left;
       margin-left: map-get($neat-grid, gutter);
@@ -68,14 +68,37 @@ $containers: (
         width: calc(#{_neat-column-width($neat-grid, $i)});
       }
     }
+  } @else {
+    @media screen and (min-width: $value) {
+      .column-#{$breakpoint} {
+        float: left;
+        margin-left: map-get($neat-grid, gutter);
+      }
+
+      @for $i from 1 through 12 {
+        .col-#{$breakpoint}-#{$i} {
+          @extend .column-#{$breakpoint};
+          width: calc(#{_neat-column-width($neat-grid, $i)});
+        }
+      }
+    }
   }
 }
 
+
 @each $breakpoint, $value in $breakpoints {
-  @media screen and (min-width: $value) {
+  @if $value == 0 {
     @for $i from 1 through 12 {
       .col-#{$breakpoint}-offset-#{$i} {
         @include grid-push($i);
+      }
+    }
+  } @else {
+    @media screen and (min-width: $value) {
+      @for $i from 1 through 12 {
+        .col-#{$breakpoint}-offset-#{$i} {
+          @include grid-push($i);
+        }
       }
     }
   }
