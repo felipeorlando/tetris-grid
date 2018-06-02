@@ -2,9 +2,9 @@ const gulp = require('gulp')
 const path = require('path')
 const runSequence = require('run-sequence')
 const sass = require('gulp-sass')
-const sourcemaps = require('gulp-sourcemaps')
-const cleanCSS = require('gulp-clean-css')
 const autoprefixer = require('gulp-autoprefixer')
+const sourcemaps = require('gulp-sourcemaps')
+const csso = require('gulp-csso')
 
 const SASS_INCLUDE_PATHS = [
   path.join(__dirname, 'node_modules', 'bourbon-neat', 'core'),
@@ -22,10 +22,8 @@ gulp.task('styles', () => {
 gulp.task('minify-styles', () => {
   return gulp.src('./src/tetris.scss')
     .pipe(sass({ includePaths: SASS_INCLUDE_PATHS }).on('error', sass.logError))
-    .pipe(sourcemaps.init())
     .pipe(autoprefixer())
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.write())
+    .pipe(csso())    
     .pipe(gulp.dest('./dist'))
 })
 
