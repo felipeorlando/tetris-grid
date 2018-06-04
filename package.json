@@ -9,6 +9,9 @@
   ],
   "author": "Felipe Orlando <fobsouza@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.11.1"
+  },
   "devDependencies": {
     "bourbon-neat": "^2.1.0",
     "gulp": "^3.9.1",
