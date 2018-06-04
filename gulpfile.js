@@ -4,6 +4,7 @@ const runSequence = require('run-sequence')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
+const rename = require('gulp-rename')
 const csso = require('gulp-csso')
 
 const SASS_INCLUDE_PATHS = [
@@ -20,10 +21,9 @@ gulp.task('styles', () => {
 })
 
 gulp.task('minify-styles', () => {
-  return gulp.src('./src/tetris.scss')
-    .pipe(sass({ includePaths: SASS_INCLUDE_PATHS }).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(csso())    
+  return gulp.src('./dist/tetris.css')
+    .pipe(csso())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./dist'))
 })
 
