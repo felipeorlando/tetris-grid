@@ -1,0 +1,9 @@
+@mixin media-querying($conditional, $min-width: '') {
+  @if $conditional {
+    @media screen and (min-width: $min-width) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

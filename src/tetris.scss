@@ -1,4 +1,5 @@
 @import 'neat';
+@import './mixins/media-querying';
 
 $neat-grid: (
   columns: 12,
@@ -28,19 +29,16 @@ $containers: (
   width: 100%;
 
   @each $breakpoint, $value in $breakpoints {
-    @media screen and (min-width: $value) {
-      max-width: map-get($containers, $breakpoint);
+    @if $value != 0 {
+      @media screen and (min-width: $value) {
+        max-width: map-get($containers, $breakpoint);
+      }
     }
   }
 }
 
 // Default columns
-.col,
-.col-xs,
-.col-sm,
-.col-md,
-.col-lg,
-.col-xl {
+.col {
   flex-grow: 1;
   flex-basis: 0;
   margin-left: 15px;
@@ -55,31 +53,24 @@ $containers: (
 }
 
 // Media Columns
-@each $breakpoint, $value in $breakpoints {
-  @if $value == 0 {
-    .column-#{$breakpoint} {
-      float: left;
-      margin-left: map-get($neat-grid, gutter);
-    }
+%column {
+  float: left;
+  margin-left: map-get($neat-grid, gutter);
+}
 
+@each $breakpoint, $value in $breakpoints {
+  @for $i from 1 through 12 {
+    .col-#{$breakpoint}-#{$i} {
+      @extend %column;
+    }
+  }
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
     @for $i from 1 through 12 {
       .col-#{$breakpoint}-#{$i} {
-        @extend .column-#{$breakpoint};
         width: calc(#{_neat-column-width($neat-grid, $i)});
-      }
-    }
-  } @else {
-    @media screen and (min-width: $value) {
-      .column-#{$breakpoint} {
-        float: left;
-        margin-left: map-get($neat-grid, gutter);
-      }
-
-      @for $i from 1 through 12 {
-        .col-#{$breakpoint}-#{$i} {
-          @extend .column-#{$breakpoint};
-          width: calc(#{_neat-column-width($neat-grid, $i)});
-        }
       }
     }
   }
@@ -87,18 +78,10 @@ $containers: (
 
 
 @each $breakpoint, $value in $breakpoints {
-  @if $value == 0 {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
     @for $i from 1 through 12 {
       .col-#{$breakpoint}-offset-#{$i} {
         @include grid-push($i);
-      }
-    }
-  } @else {
-    @media screen and (min-width: $value) {
-      @for $i from 1 through 12 {
-        .col-#{$breakpoint}-offset-#{$i} {
-          @include grid-push($i);
-        }
       }
     }
   }
