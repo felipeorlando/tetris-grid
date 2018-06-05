@@ -7,7 +7,7 @@ $neat-grid: (
 );
 
 $breakpoints: (
-	xs: 0,
+	xs: null,
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
@@ -37,7 +37,7 @@ $containers: (
   width: 100%;
 
   @each $breakpoint, $value in $breakpoints {
-    @if $value != 0 {
+    @if $value {
       @media screen and (min-width: $value) {
         max-width: map-get($containers, $breakpoint);
       }
@@ -75,7 +75,7 @@ $containers: (
 }
 
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     @for $i from 1 through 12 {
       .col-#{$breakpoint}-#{$i} {
         width: calc(#{_neat-column-width($neat-grid, $i)});
@@ -86,7 +86,7 @@ $containers: (
 
 // Offsets
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     @for $i from 1 through 12 {
       .col-#{$breakpoint}-offset-#{$i} {
         @include grid-push($i);
@@ -97,7 +97,7 @@ $containers: (
 
 // Start Flexbox Alignment
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     .start-#{$breakpoint} {
       justify-content: flex-start;
       text-align: start;
@@ -107,7 +107,7 @@ $containers: (
 
 // Center Flexbox Alignment
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     .center-#{$breakpoint} {
       justify-content: center;
       text-align: center;
@@ -117,7 +117,7 @@ $containers: (
 
 // End Flexbox Alignment
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     .end-#{$breakpoint} {
       justify-content: flex-end;
       text-align: end;
@@ -127,7 +127,7 @@ $containers: (
 
 // Top Flexbox Alignment
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     .top-#{$breakpoint} {
       align-items: flex-start;
     }
@@ -136,7 +136,7 @@ $containers: (
 
 // Middle Flexbox Alignment
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     .middle-#{$breakpoint} {
       align-items: center;
     }
@@ -145,7 +145,7 @@ $containers: (
 
 // Bottom Flexbox Alignment
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     .bottom-#{$breakpoint} {
       align-items: flex-end;
     }
@@ -154,7 +154,7 @@ $containers: (
 
 // Around Flexbox Distribution
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     .around-#{$breakpoint} {
       justify-content: space-around;
     }
@@ -163,7 +163,7 @@ $containers: (
 
 // Between Flexbox Distribution
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+  @include media-querying($conditional: ($value), $min-width: $value) {
     .around-#{$breakpoint} {
       justify-content: space-between;
     }
@@ -173,7 +173,7 @@ $containers: (
 // Helper to hide elements
 @each $breakpoint, $value in $breakpoints {
   @include media-querying(
-    $conditional: ($value != 0),
+    $conditional: ($value),
     $min-width: $value,
     $max-width: map-get($next-breakpoints, $breakpoint)
   ) {
