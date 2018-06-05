@@ -1,7 +1,13 @@
-@mixin media-querying($conditional, $min-width: '') {
+@mixin media-querying($conditional, $min-width: null, $max-width: null) {
   @if $conditional {
-    @media screen and (min-width: $min-width) {
-      @content;
+    @if $max-width {
+      @media screen and (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: $min-width) {
+        @content;
+      }
     }
   } @else {
     @content;

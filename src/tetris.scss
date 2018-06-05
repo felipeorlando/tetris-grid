@@ -14,6 +14,14 @@ $breakpoints: (
 	xl: 1200px,
 );
 
+$next-breakpoints: (
+	xs: 576px,
+	sm: 768px,
+	md: 992px,
+	lg: 1200px,
+	xl: null,
+);
+
 $containers: (
 	xs: none,
 	sm: 540px,
@@ -76,13 +84,101 @@ $containers: (
   }
 }
 
-
+// Offsets
 @each $breakpoint, $value in $breakpoints {
   @include media-querying($conditional: ($value != 0), $min-width: $value) {
     @for $i from 1 through 12 {
       .col-#{$breakpoint}-offset-#{$i} {
         @include grid-push($i);
       }
+    }
+  }
+}
+
+// Start Flexbox Alignment
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+    .start-#{$breakpoint} {
+      justify-content: flex-start;
+      text-align: start;
+    }
+  }
+}
+
+// Center Flexbox Alignment
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+    .center-#{$breakpoint} {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+// End Flexbox Alignment
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+    .end-#{$breakpoint} {
+      justify-content: flex-end;
+      text-align: end;
+    }
+  }
+}
+
+// Top Flexbox Alignment
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+    .top-#{$breakpoint} {
+      align-items: flex-start;
+    }
+  }
+}
+
+// Middle Flexbox Alignment
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+    .middle-#{$breakpoint} {
+      align-items: center;
+    }
+  }
+}
+
+// Bottom Flexbox Alignment
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+    .bottom-#{$breakpoint} {
+      align-items: flex-end;
+    }
+  }
+}
+
+// Around Flexbox Distribution
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+    .around-#{$breakpoint} {
+      justify-content: space-around;
+    }
+  }
+}
+
+// Between Flexbox Distribution
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying($conditional: ($value != 0), $min-width: $value) {
+    .around-#{$breakpoint} {
+      justify-content: space-between;
+    }
+  }
+}
+
+// Helper to hide elements
+@each $breakpoint, $value in $breakpoints {
+  @include media-querying(
+    $conditional: ($value != 0),
+    $min-width: $value,
+    $max-width: map-get($next-breakpoints, $breakpoint)
+  ) {
+    .hidden-#{$breakpoint} {
+      display: none;
     }
   }
 }
