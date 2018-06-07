@@ -75,7 +75,7 @@ $containers: (
 }
 
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  @include media-querying($conditional: $value, $min-width: $value) {
     @for $i from 1 through 12 {
       .col-#{$breakpoint}-#{$i} {
         width: calc(#{_neat-column-width($neat-grid, $i)});
@@ -86,7 +86,7 @@ $containers: (
 
 // Offsets
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  @include media-querying($conditional: $value, $min-width: $value) {
     @for $i from 1 through 12 {
       .col-#{$breakpoint}-offset-#{$i} {
         @include grid-push($i);
@@ -95,29 +95,26 @@ $containers: (
   }
 }
 
-// Start Flexbox Alignment
+// Horizontal Alignment
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  // Start Flexbox Alignment
+  @include media-querying($conditional: $value, $min-width: $value) {
     .start-#{$breakpoint} {
       justify-content: flex-start;
       text-align: start;
     }
   }
-}
 
-// Center Flexbox Alignment
-@each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  // Center Flexbox Alignment
+  @include media-querying($conditional: $value, $min-width: $value) {
     .center-#{$breakpoint} {
       justify-content: center;
       text-align: center;
     }
   }
-}
 
-// End Flexbox Alignment
-@each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  // End Flexbox Alignment
+  @include media-querying($conditional: $value, $min-width: $value) {
     .end-#{$breakpoint} {
       justify-content: flex-end;
       text-align: end;
@@ -125,47 +122,50 @@ $containers: (
   }
 }
 
-// Top Flexbox Alignment
+// Vertical Alignment
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  // Top Flexbox Alignment
+  @include media-querying($conditional: $value, $min-width: $value) {
     .top-#{$breakpoint} {
       align-items: flex-start;
     }
   }
-}
 
-// Middle Flexbox Alignment
-@each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  // Middle Flexbox Alignment
+  @include media-querying($conditional: $value, $min-width: $value) {
     .middle-#{$breakpoint} {
       align-items: center;
     }
   }
-}
 
-// Bottom Flexbox Alignment
-@each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  // Bottom Flexbox Alignment
+  @include media-querying($conditional: $value, $min-width: $value) {
     .bottom-#{$breakpoint} {
       align-items: flex-end;
     }
   }
 }
 
-// Around Flexbox Distribution
+// Justify Alignments
 @each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
+  // Around Flexbox Distribution
+  @include media-querying($conditional: $value, $min-width: $value) {
     .around-#{$breakpoint} {
       justify-content: space-around;
     }
   }
-}
 
-// Between Flexbox Distribution
-@each $breakpoint, $value in $breakpoints {
-  @include media-querying($conditional: ($value), $min-width: $value) {
-    .around-#{$breakpoint} {
+  // Between Flexbox Distribution
+  @include media-querying($conditional: $value, $min-width: $value) {
+    .between-#{$breakpoint} {
       justify-content: space-between;
+    }
+  }
+
+  // No Justify Flexbox Distribution
+  @include media-querying($conditional: $value, $min-width: $value) {
+    .no-justify-#{$breakpoint} {
+      justify-content: flex-start;
     }
   }
 }
@@ -173,7 +173,7 @@ $containers: (
 // Helper to hide elements
 @each $breakpoint, $value in $breakpoints {
   @include media-querying(
-    $conditional: ($value),
+    $conditional: $value,
     $min-width: $value,
     $max-width: map-get($next-breakpoints, $breakpoint)
   ) {
