@@ -12,6 +12,18 @@
   "engines": {
     "node": ">=8.11.1"
   },
+  "homepage": "https://github.com/felipeorlando/tetris-grid#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipeorlando/tetris-grid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/felipeorlando/tetris-grid/issues"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp build"
+  },
   "devDependencies": {
     "bourbon-neat": "^2.1.0",
     "gulp": "^3.9.1",
