@@ -15,6 +15,12 @@
       background-color: rgb(241, 77, 12);
       height: 30px;
     }
+    [class*='start-'] .block,
+    [class*='center-'] .block,
+    [class*='end-'] .block {
+      max-width: 100%;
+      width: 100px;
+    }
   </style>
 </head>
 <body>
@@ -30,5 +36,11 @@
 
     <div class="block col-md-6"></div>
   </div>
+
+  <div class="row center-xs end-sm center-xl">
+      <div class="block"></div>
+
+      <div class="block"></div>
+    </div>
 </body>
 </html>
