@@ -15,7 +15,7 @@ gulp.task('styles', () => {
   return gulp.src('./src/tetris.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ includePaths: SASS_INCLUDE_PATHS }).on('error', sass.logError))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist'))
 })
