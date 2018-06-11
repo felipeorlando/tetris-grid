@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
 const rename = require('gulp-rename')
 const csso = require('gulp-csso')
+const inlineCss = require('gulp-inline-css')
 
 const SASS_INCLUDE_PATHS = [
   path.join(__dirname, 'node_modules', 'bourbon-neat', 'core'),
@@ -25,6 +26,13 @@ gulp.task('minify-styles', () => {
     .pipe(csso())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('docs', () => {
+  return gulp.src('./docs/src/main.scss')
+    .pipe(sass({ includePaths: SASS_INCLUDE_PATHS }).on('error', sass.logError))
+    .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
+    .pipe(gulp.dest('./docs'))
 })
 
 gulp.task('default', () => {
