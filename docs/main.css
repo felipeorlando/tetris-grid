@@ -628,6 +628,11 @@ table {
   margin-right: -15px;
   width: calc(100% + 30px); }
 
+a {
+  color: inherit; }
+  a:hover {
+    color: inherit; }
+
 .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -657,3 +662,41 @@ table {
       background-color: #fff;
       color: #000;
       padding: 5px; }
+
+.box {
+  background-color: #fff;
+  height: 15px; }
+
+.section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+  .section__title {
+    font-family: 'Fira Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: lowercase; }
+    .section__title small {
+      display: block;
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: 24px; }
+  .section--contrast {
+    background-color: #fff;
+    color: #000; }
+    .section--contrast .box {
+      background-color: #000; }
+
+.space {
+  margin-top: 15px; }

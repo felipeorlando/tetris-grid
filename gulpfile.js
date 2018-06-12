@@ -7,6 +7,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const rename = require('gulp-rename')
 const csso = require('gulp-csso')
 const inlineCss = require('gulp-inline-css')
+const browserSync = require('browser-sync').create()
 
 const SASS_INCLUDE_PATHS = [
   path.join(__dirname, 'node_modules', 'bourbon-neat', 'core'),
@@ -28,11 +29,22 @@ gulp.task('minify-styles', () => {
     .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('docs', () => {
+gulp.task('docs-sass', () => {
   return gulp.src('./docs/src/main.scss')
     .pipe(sass({ includePaths: SASS_INCLUDE_PATHS }).on('error', sass.logError))
     .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
     .pipe(gulp.dest('./docs'))
+})
+
+gulp.task('docs-watch', () => {
+  const reload = browserSync.reload
+
+  browserSync.init({
+    server: './docs'
+  })
+
+  gulp.watch('./docs/src/main.scss', ['docs-sass'])
+  gulp.watch('./docs/index.html').on('change', reload)
 })
 
 gulp.task('default', () => {

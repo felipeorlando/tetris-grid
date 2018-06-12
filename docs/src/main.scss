@@ -2,6 +2,14 @@
 @import './reset';
 @import '../../dist/tetris.min';
 
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
 .header {
   align-items: center;
   background-color: #000;
@@ -31,4 +39,47 @@
       padding: 5px;
     }
   }
+}
+
+.box {
+  background-color: #fff;
+  height: 15px;
+}
+
+.section {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+
+  &__title {
+    font-family: 'Fira Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: lowercase;
+
+    small {
+      display: block;
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: 24px;
+    }
+  }
+
+  &--contrast {
+    background-color: #fff;
+    color: #000;
+
+    .box {
+      background-color: #000;
+    }
+  }
+}
+
+.space {
+  margin-top: 15px;
 }
