@@ -4,7 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tetris Grid CSS</title>
+
+  <title>tetris-grid</title>
+  <meta name="description" content="A simple and lighter CSS grid"/>
+  <meta name="author" content="Felipe Orlando"/>
+  <link rel="base" href="https://felipeorlando.github.io/tetris-grid/"/>
+  <link rel="canonical" href="https://felipeorlando.github.io/tetris-grid/"/>
+  <meta name="robots" content="index/follow"/>
+  <meta name="googlebot" content="index/follow"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta name="msapplication-navbutton-color" content=""/>
+  <meta name="apple-mobile-web-app-status-bar-style" content=""/>
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="tetris-grid"/>
+  <meta itemprop="description" content="A simple and lighter CSS grid"/>
+  <meta itemprop="image" content="https://felipeorlando.github.io/tetris-grid/favicon.jpg"/>
+  <!-- markup for facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="tetris-grid"/>
+  <meta property="og:url" content="https://felipeorlando.github.io/tetris-grid/"/>
+  <meta property="og:site_name" content="no"/>
+  <meta property="og:image" content="https://felipeorlando.github.io/tetris-grid/favicon.jpg"/>
+  <meta property="og:description" content="A simple and lighter CSS grid"/>
+  <meta property="og:locale" content="en"/>
+  <meta property="fb:app_id" content="no"/>
+  <meta property="fb:admins" content="no"/>
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="./favicons/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="./favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./favicons/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="./favicons/favicon-128.png" sizes="128x128" />
+  <meta name="msapplication-TileColor" content="#000000" />
+  <meta name="msapplication-TileImage" content="./favicons/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="./favicons/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="./favicons/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="./favicons/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="./favicons/mstile-310x310.png" />
+
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -20,18 +65,18 @@
     <div class="container">
       <h2 class="section__title">
         Responsive
-        <small>easy peasy, thinking in mobile first</small>
+        <small>easy peasy, thinking in mobile first, no more useless &lt;div&gt;</small>
       </h2>
 
       <div class="row space">
-        <div class="col-xs-6 col-sm-3 col-md-5 col-lg-3 box space"></div>
-        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-6 box space"></div>
-        <div class="col-xs-12 col-sm-3 col-md-5 col-lg-3 box space"></div>
+        <div class="col-xs-6 col-sm-3 col-md-5 col-lg-3 box box--dark space"></div>
+        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-6 box box--dark space"></div>
+        <div class="col-xs-12 col-sm-3 col-md-5 col-lg-3 box box--dark space"></div>
       </div>
 
       <div class="row space">
-        <div class="col-xs-12 col-sm-6 box space"></div>
-        <div class="col-xs-12 col-sm-6 box space"></div>
+        <div class="col-xs-12 col-sm-6 box box--dark space"></div>
+        <div class="col-xs-12 col-sm-6 box box--dark space"></div>
       </div>
     </div>
   </section>
@@ -40,7 +85,7 @@
     <div class="container">
       <h2 class="section__title">
         Fluid
-        <small>easy peasy, thinking in mobile first</small>
+        <small>the default 12 columns fills 100% of it's context</small>
       </h2>
 
       <div class="row space">
@@ -84,21 +129,21 @@
     <div class="container">
       <h2 class="section__title">
         Offsets
-        <small>easy peasy, thinking in mobile first</small>
+        <small>.offset- deal with blank spaces on the left</small>
       </h2>
 
       <div class="row space">
-        <div class="col-xs-1 col-xs-offset-11 box space"></div>
-        <div class="col-xs-2 col-xs-offset-10 box space"></div>
-        <div class="col-xs-3 col-xs-offset-9 box space"></div>
-        <div class="col-xs-4 col-xs-offset-8 box space"></div>
-        <div class="col-xs-5 col-xs-offset-7 box space"></div>
-        <div class="col-xs-6 col-xs-offset-6 box space"></div>
-        <div class="col-xs-7 col-xs-offset-5 box space"></div>
-        <div class="col-xs-8 col-xs-offset-4 box space"></div>
-        <div class="col-xs-9 col-xs-offset-3 box space"></div>
-        <div class="col-xs-10 col-xs-offset-2 box space"></div>
-        <div class="col-xs-11 col-xs-offset-1 box space"></div>
+        <div class="col-xs-1 offset-xs-11 box box--dark space"></div>
+        <div class="col-xs-2 offset-xs-10 box box--dark space"></div>
+        <div class="col-xs-3 offset-xs-9 box box--dark space"></div>
+        <div class="col-xs-4 offset-xs-8 box box--dark space"></div>
+        <div class="col-xs-5 offset-xs-7 box box--dark space"></div>
+        <div class="col-xs-6 offset-xs-6 box box--dark space"></div>
+        <div class="col-xs-7 offset-xs-5 box box--dark space"></div>
+        <div class="col-xs-8 offset-xs-4 box box--dark space"></div>
+        <div class="col-xs-9 offset-xs-3 box box--dark space"></div>
+        <div class="col-xs-10 offset-xs-2 box box--dark space"></div>
+        <div class="col-xs-11 offset-xs-1 box box--dark space"></div>
       </div>
     </div>
   </section>
@@ -107,7 +152,7 @@
     <div class="container">
       <h2 class="section__title">
         Auto Width
-        <small>easy peasy, thinking in mobile first</small>
+        <small>use just .col to elements choose their width</small>
       </h2>
 
       <div class="row space">
@@ -134,10 +179,83 @@
     </div>
   </section>
 
+  <section class="section section--contrast">
+    <div class="container">
+      <h2 class="section__title">
+        Vertical Alignment
+        <small>.top-, .middle- and .bottom- help with that</small>
+      </h2>
+
+      <div class="row row--high space">
+        <div class="col-xs-4 box box--dark box--father space top-xs">
+          <div class="box box--fluid"></div>
+        </div>
+        <div class="col-xs-4 box box--dark box--father space middle-xs">
+          <div class="box box--fluid"></div>
+        </div>
+        <div class="col-xs-4 box box--dark box--father space bottom-xs">
+          <div class="box box--fluid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">
+        Horizontal Alignment
+        <small>.top-, .middle- and .bottom- help with that</small>
+      </h2>
+
+      <div class="row row--high space">
+        <div class="col-xs-12 box box--spaced space start-xs">
+          <div class="box box--mini box--dark"></div>
+        </div>
+        <div class="col-xs-12 box box--spaced space center-xs">
+          <div class="box box--mini box--dark"></div>
+        </div>
+        <div class="col-xs-12 box box--spaced space end-xs">
+          <div class="box box--mini box--dark"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--contrast">
+    <div class="container">
+      <h2 class="section__title">
+        Distribution
+        <small>.around-, .between distribute the elements, .no-justify- stop it</small>
+      </h2>
+
+      <div class="row row--high space">
+        <div class="col-xs-12 box box--spaced box--dark space around-xs">
+          <div class="box box--mini"></div>
+          <div class="box box--mini"></div>
+          <div class="box box--mini"></div>
+        </div>
+        <div class="col-xs-12 box box--spaced box--dark space between-xs">
+          <div class="box box--mini"></div>
+          <div class="box box--mini"></div>
+          <div class="box box--mini"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">
+        Helpers
+        <small>.container, .collapse, .row helps you to go far</small>
+      </h2>
+    </div>
+  </section>
+
   <footer class="section section--contrast">
     <div class="container">
       <h2 class="section__title">
-        Work in progress
+        Github:
         <small>
           <a href="https://github.com/felipeorlando/tetris-grid">github.com/felipeorlando/tetris-grid</a>
         </small>

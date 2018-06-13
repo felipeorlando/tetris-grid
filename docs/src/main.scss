@@ -42,8 +42,33 @@ a {
 }
 
 .box {
+  display: flex;
   background-color: #fff;
+  box-sizing: border-box;
   height: 15px;
+
+  &--dark {
+    background-color: #000;
+  }
+
+  &--father {
+    height: 150px;
+    padding: 20px 30px;
+  }
+
+  &--fluid {
+    width: 100%;
+  }
+
+  &--mini {
+    max-width: 100px;
+    width: 100%;
+  }
+
+  &--spaced {
+    height: auto;
+    padding: 20px 30px;
+  }
 }
 
 .section {
@@ -73,10 +98,6 @@ a {
   &--contrast {
     background-color: #fff;
     color: #000;
-
-    .box {
-      background-color: #000;
-    }
   }
 }
 

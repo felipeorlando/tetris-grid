@@ -225,144 +225,144 @@ table {
   .col-xl-12 {
     width: calc(100% - 30px); } }
 
-.col-xs-offset-1 {
+.offset-xs-1 {
   margin-left: calc(8.33333% - 16.25px + 30px); }
 
-.col-xs-offset-2 {
+.offset-xs-2 {
   margin-left: calc(16.66667% - 17.5px + 30px); }
 
-.col-xs-offset-3 {
+.offset-xs-3 {
   margin-left: calc(25% - 18.75px + 30px); }
 
-.col-xs-offset-4 {
+.offset-xs-4 {
   margin-left: calc(33.33333% - 20px + 30px); }
 
-.col-xs-offset-5 {
+.offset-xs-5 {
   margin-left: calc(41.66667% - 21.25px + 30px); }
 
-.col-xs-offset-6 {
+.offset-xs-6 {
   margin-left: calc(50% - 22.5px + 30px); }
 
-.col-xs-offset-7 {
+.offset-xs-7 {
   margin-left: calc(58.33333% - 23.75px + 30px); }
 
-.col-xs-offset-8 {
+.offset-xs-8 {
   margin-left: calc(66.66667% - 25px + 30px); }
 
-.col-xs-offset-9 {
+.offset-xs-9 {
   margin-left: calc(75% - 26.25px + 30px); }
 
-.col-xs-offset-10 {
+.offset-xs-10 {
   margin-left: calc(83.33333% - 27.5px + 30px); }
 
-.col-xs-offset-11 {
+.offset-xs-11 {
   margin-left: calc(91.66667% - 28.75px + 30px); }
 
-.col-xs-offset-12 {
+.offset-xs-12 {
   margin-left: calc(100% - 30px + 30px); }
 
 @media screen and (min-width: 576px) {
-  .col-sm-offset-1 {
+  .offset-sm-1 {
     margin-left: calc(8.33333% - 16.25px + 30px); }
-  .col-sm-offset-2 {
+  .offset-sm-2 {
     margin-left: calc(16.66667% - 17.5px + 30px); }
-  .col-sm-offset-3 {
+  .offset-sm-3 {
     margin-left: calc(25% - 18.75px + 30px); }
-  .col-sm-offset-4 {
+  .offset-sm-4 {
     margin-left: calc(33.33333% - 20px + 30px); }
-  .col-sm-offset-5 {
+  .offset-sm-5 {
     margin-left: calc(41.66667% - 21.25px + 30px); }
-  .col-sm-offset-6 {
+  .offset-sm-6 {
     margin-left: calc(50% - 22.5px + 30px); }
-  .col-sm-offset-7 {
+  .offset-sm-7 {
     margin-left: calc(58.33333% - 23.75px + 30px); }
-  .col-sm-offset-8 {
+  .offset-sm-8 {
     margin-left: calc(66.66667% - 25px + 30px); }
-  .col-sm-offset-9 {
+  .offset-sm-9 {
     margin-left: calc(75% - 26.25px + 30px); }
-  .col-sm-offset-10 {
+  .offset-sm-10 {
     margin-left: calc(83.33333% - 27.5px + 30px); }
-  .col-sm-offset-11 {
+  .offset-sm-11 {
     margin-left: calc(91.66667% - 28.75px + 30px); }
-  .col-sm-offset-12 {
+  .offset-sm-12 {
     margin-left: calc(100% - 30px + 30px); } }
 
 @media screen and (min-width: 768px) {
-  .col-md-offset-1 {
+  .offset-md-1 {
     margin-left: calc(8.33333% - 16.25px + 30px); }
-  .col-md-offset-2 {
+  .offset-md-2 {
     margin-left: calc(16.66667% - 17.5px + 30px); }
-  .col-md-offset-3 {
+  .offset-md-3 {
     margin-left: calc(25% - 18.75px + 30px); }
-  .col-md-offset-4 {
+  .offset-md-4 {
     margin-left: calc(33.33333% - 20px + 30px); }
-  .col-md-offset-5 {
+  .offset-md-5 {
     margin-left: calc(41.66667% - 21.25px + 30px); }
-  .col-md-offset-6 {
+  .offset-md-6 {
     margin-left: calc(50% - 22.5px + 30px); }
-  .col-md-offset-7 {
+  .offset-md-7 {
     margin-left: calc(58.33333% - 23.75px + 30px); }
-  .col-md-offset-8 {
+  .offset-md-8 {
     margin-left: calc(66.66667% - 25px + 30px); }
-  .col-md-offset-9 {
+  .offset-md-9 {
     margin-left: calc(75% - 26.25px + 30px); }
-  .col-md-offset-10 {
+  .offset-md-10 {
     margin-left: calc(83.33333% - 27.5px + 30px); }
-  .col-md-offset-11 {
+  .offset-md-11 {
     margin-left: calc(91.66667% - 28.75px + 30px); }
-  .col-md-offset-12 {
+  .offset-md-12 {
     margin-left: calc(100% - 30px + 30px); } }
 
 @media screen and (min-width: 992px) {
-  .col-lg-offset-1 {
+  .offset-lg-1 {
     margin-left: calc(8.33333% - 16.25px + 30px); }
-  .col-lg-offset-2 {
+  .offset-lg-2 {
     margin-left: calc(16.66667% - 17.5px + 30px); }
-  .col-lg-offset-3 {
+  .offset-lg-3 {
     margin-left: calc(25% - 18.75px + 30px); }
-  .col-lg-offset-4 {
+  .offset-lg-4 {
     margin-left: calc(33.33333% - 20px + 30px); }
-  .col-lg-offset-5 {
+  .offset-lg-5 {
     margin-left: calc(41.66667% - 21.25px + 30px); }
-  .col-lg-offset-6 {
+  .offset-lg-6 {
     margin-left: calc(50% - 22.5px + 30px); }
-  .col-lg-offset-7 {
+  .offset-lg-7 {
     margin-left: calc(58.33333% - 23.75px + 30px); }
-  .col-lg-offset-8 {
+  .offset-lg-8 {
     margin-left: calc(66.66667% - 25px + 30px); }
-  .col-lg-offset-9 {
+  .offset-lg-9 {
     margin-left: calc(75% - 26.25px + 30px); }
-  .col-lg-offset-10 {
+  .offset-lg-10 {
     margin-left: calc(83.33333% - 27.5px + 30px); }
-  .col-lg-offset-11 {
+  .offset-lg-11 {
     margin-left: calc(91.66667% - 28.75px + 30px); }
-  .col-lg-offset-12 {
+  .offset-lg-12 {
     margin-left: calc(100% - 30px + 30px); } }
 
 @media screen and (min-width: 1200px) {
-  .col-xl-offset-1 {
+  .offset-xl-1 {
     margin-left: calc(8.33333% - 16.25px + 30px); }
-  .col-xl-offset-2 {
+  .offset-xl-2 {
     margin-left: calc(16.66667% - 17.5px + 30px); }
-  .col-xl-offset-3 {
+  .offset-xl-3 {
     margin-left: calc(25% - 18.75px + 30px); }
-  .col-xl-offset-4 {
+  .offset-xl-4 {
     margin-left: calc(33.33333% - 20px + 30px); }
-  .col-xl-offset-5 {
+  .offset-xl-5 {
     margin-left: calc(41.66667% - 21.25px + 30px); }
-  .col-xl-offset-6 {
+  .offset-xl-6 {
     margin-left: calc(50% - 22.5px + 30px); }
-  .col-xl-offset-7 {
+  .offset-xl-7 {
     margin-left: calc(58.33333% - 23.75px + 30px); }
-  .col-xl-offset-8 {
+  .offset-xl-8 {
     margin-left: calc(66.66667% - 25px + 30px); }
-  .col-xl-offset-9 {
+  .offset-xl-9 {
     margin-left: calc(75% - 26.25px + 30px); }
-  .col-xl-offset-10 {
+  .offset-xl-10 {
     margin-left: calc(83.33333% - 27.5px + 30px); }
-  .col-xl-offset-11 {
+  .offset-xl-11 {
     margin-left: calc(91.66667% - 28.75px + 30px); }
-  .col-xl-offset-12 {
+  .offset-xl-12 {
     margin-left: calc(100% - 30px + 30px); } }
 
 .start-xs {
@@ -664,8 +664,26 @@ a {
       padding: 5px; }
 
 .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 15px; }
+  .box--dark {
+    background-color: #000; }
+  .box--father {
+    height: 150px;
+    padding: 20px 30px; }
+  .box--fluid {
+    width: 100%; }
+  .box--mini {
+    max-width: 100px;
+    width: 100%; }
+  .box--spaced {
+    height: auto;
+    padding: 20px 30px; }
 
 .section {
   -webkit-box-align: center;
@@ -695,8 +713,6 @@ a {
   .section--contrast {
     background-color: #fff;
     color: #000; }
-    .section--contrast .box {
-      background-color: #000; }
 
 .space {
   margin-top: 15px; }

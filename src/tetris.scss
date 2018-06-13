@@ -88,7 +88,7 @@ $containers: (
 @each $breakpoint, $value in $breakpoints {
   @include media-querying($conditional: $value, $min-width: $value) {
     @for $i from 1 through 12 {
-      .col-#{$breakpoint}-offset-#{$i} {
+      .offset-#{$breakpoint}-#{$i} {
         @include grid-push($i);
       }
     }
