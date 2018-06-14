@@ -1,5 +1,9 @@
-◼️ tetris-grid
-===========
+<p align="center">
+  <img alt="tetris-grid" src="https://felipeorlando.github.io/tetris-grid/favicon.jpg" />
+</p>
+<h1 align="center">tetris-grid</h1>
+
+[![npm version](https://badge.fury.io/js/tetris-grid.svg)](https://badge.fury.io/js/tetris-grid)
 
 [git.io/tetris-grid](https://git.io/tetris-grid)
 
