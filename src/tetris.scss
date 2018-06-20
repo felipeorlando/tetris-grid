@@ -33,6 +33,7 @@ $containers: (
 // Containers
 .container {
   @include grid-container;
+  box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
 
@@ -47,8 +48,8 @@ $containers: (
 
 // Default columns
 .col {
-  flex-grow: 1;
   flex-basis: 0;
+  flex-grow: 1;
   margin-left: 15px;
 
   &:first-child {
@@ -58,6 +59,7 @@ $containers: (
 
 [class*='col-'] {
   @include grid-column(12);
+  box-sizing: border-box;
 }
 
 // Media Columns
