@@ -64,6 +64,22 @@ $containers: (
       }
     }
   }
+
+  // Light Containers
+  @each $breakpoint, $value in $breakpoints {
+    @include media-querying(
+      $breakpoint: $value,
+      $min-width: $value,
+      $max-width: map-get($next-breakpoints, $breakpoint),
+      $forces-media: true,
+      $forces-max-width: true
+    ) {
+      &--light-#{$breakpoint} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 }
 
 // Default columns
