@@ -45,6 +45,19 @@ $containers: (
       }
     }
   }
+
+  // fluid containers
+  @each $breakpoint, $value in $breakpoints {
+    @include media-querying(
+      $conditional: $value,
+      $min-width: $value,
+      $max-width: map-get($next-breakpoints, $breakpoint)
+    ) {
+      &--fluid-#{$breakpoint} {
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 // Default columns
