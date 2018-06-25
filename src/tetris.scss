@@ -224,6 +224,7 @@ $containers: (
 
 // Row
 .row {
+  align-items: flex-start;
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
